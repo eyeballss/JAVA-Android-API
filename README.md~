@@ -147,16 +147,3 @@ Set<String> type의 default 반환값 : null
 
 ```
 
-저장된 데이터 중 특정 데이터를 지우고 싶다면 아래 메소드를 부른다.
-
-`removePreferences(String1, String2)`
-
-String1 은 Preference가 저장할 때 사용했던 파일의 이름이다. (반드시 같은 이름이어야 함)
-String2 는 Preference가 저장할 때 사용했던 데이터의 키 값이다.
-
-저장된 모든 데이터를 지우고 싶다면 아래 메소드를 부른다.
-
-`removeAllPreferences(String)`
-
-String은 Preference가 저장할 때 사용했던 파일의 이름이다. (반드시 같은 이름이어야 함)
-
