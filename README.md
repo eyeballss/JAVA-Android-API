@@ -93,7 +93,7 @@ String2 는 에러 창의 메세지이다.
 *다양한 SweetAlert를 넣고싶다면 [이곳](https://github.com/pedant/sweet-alert-dialog)을 클릭*
 
 
-###- isNetworkConnected 사용법 -
+### - isNetworkConnected 사용법 -
 
 현재 네트워크가 연결되어 있는지 아닌지를 판별하는 메소드이다.
 사용을 위해 RootActivity를 Activity class에 상속시킨다.
@@ -106,7 +106,7 @@ String2 는 에러 창의 메세지이다.
 라는 의미이다.
 
 
-###- Preference 사용법 -
+### - Preference 사용법 -
 
 간단한 데이터를 저장하여 앱이 꺼진 후에도 날아가지 않도록 하는 메소드이다.
 사용을 위해 RootActivity를 Activity class에 상속시킨다.
