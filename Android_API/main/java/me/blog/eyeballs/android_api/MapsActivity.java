@@ -162,6 +162,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return result;
     }
 
+    public float getDistanceBetween(Location a, Location b){
+        //a와 b 사이의 직선 거리가 meter 단위로 반환되어 나옵니다.
+        return a.distanceTo(b);
+    }
+
     private void initLocation() {
         //위치 매니저를 획득
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);

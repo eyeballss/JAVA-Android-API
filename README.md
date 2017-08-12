@@ -214,6 +214,12 @@ mMap에
 
 한국을 기준으로 해당 위치의 주소값, 위도, 경도, 국가 번호, postal Code 등이 String으로 반환 된다.
 
+Location A와 Location B의 사이 거리를 구하고 싶다면 아래 메소드를 부른다.
+
+`getDistanceBetween(Location1, Location2)`
+
+Location1 과 Location2 사이의 직선 거리가 float 타입 meter 단위로 반환된다.
+
 
 ### - Vibrator 사용법 -
 
