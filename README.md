@@ -215,3 +215,29 @@ mMap에
 한국을 기준으로 해당 위치의 주소값, 위도, 경도, 국가 번호, postal Code 등이 String으로 반환 된다.
 
 
+### - Vibrator 사용법 -
+
+AndroidManifest.xml 의 manifrst에 
+
+`<uses-permission android:name="android.permission.VIBRATE"/>`
+
+을 추가한다.
+
+n초간 진동을 주기 위해 아래 메소드를 부른다.
+
+`startVibration(int)`
+
+int에 진동 시간(초)을 넣는다.
+
+패턴이 있는 진동을 주기 위해 아래 메소드를 부른다.
+
+`startPatternVibration(int1, int2, int3)`
+
+int1은 대기 시간(초)을, int2는 진동 시간(초)을 나타낸다.
+int3은 무한하게 반복할지를 결정한다. 0을 넣으면 무한하게 반복하고 음의 정수를 넣으면 한 번만 반복한다. 
+양의 정수를 넣으면 패턴의 해당 인덱스부터 무한히 반복한다.
+기본적으로 3번 반복하지만, 더 반복하고 싶다면 메소드 내에 patten 배열 뒤에 값을 더 추가하면 된다.
+
+모든 진동을 멈추고 싶다면 아래 메소드를 부른다.
+
+`stopVibration()`
