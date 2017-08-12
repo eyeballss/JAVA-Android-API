@@ -176,27 +176,42 @@ MapsActivity에 LocationListener를 implements 한다.
 구현되지 않은 4가지 메소드 ( onLocationChanged, onStatusChanged, onProviderEnabled, onProviderDisabled )는 Github에서 가져다가 쓴다.
 
 현재 GPS가 켜져있는지 꺼져있는지 알고 싶다면 아래 메소드를 부른다.
+
 `checkGPS()`
+
 ture 값이 반환되면 켜져있다는 의미이고 false가 반환되면 꺼져있다는 의미이다.
 
 `onLocationChanged` 메소드에서 위치가 업데이트 되었을 때 실행 될 코드를 넣는다.
 
 나의 위치를 맵 상에 보이고 싶을 땐 아래 메소드를 부른다.
+
 `setMyLocation(Boolean)`
+
 호출 시 true를 넣으면 나의 위치가 맵 상에 보이고 false를 넣으면 안 보인다.
 
 해당 위치로 맵을 이동시키고 싶다면 아래 메소드를 부른다.
+
 `moveCamera(LatLng, Int)`
 `moveCamera(Location, Int)`
+
 호출 시 LatLng 위치로 맵이 이동한다. 두번째 파라미터인 Int는 확대하는 정도이며 생략이 가능하다. 이 때 default로 15가 들어간다.
 
 맵을 클릭하거나 길게 클릭했을 때 이벤트를 달고 싶다면 onMapReady 메소드 내부에서
 mMap에 
-`setOnMapClickListener` 혹은 `setOnMapLongClickListener` 리스너를 달면 된다.
+
+`setOnMapClickListener` 
+
+혹은
+
+ `setOnMapLongClickListener` 
+
+리스너를 달면 된다.
 
 해당 위치의 주소 값을 알고 싶다면 아래 메소드를 부른다.
+
 `getAddress(LatLng)`
 `getAddress(Location)`
+
 한국을 기준으로 해당 위치의 주소값, 위도, 경도, 국가 번호, postal Code 등이 String으로 반환 된다.
 
 
