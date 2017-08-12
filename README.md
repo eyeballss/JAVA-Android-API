@@ -160,3 +160,14 @@ String2 는 Preference가 저장할 때 사용했던 데이터의 키 값이다.
 
 String은 Preference가 저장할 때 사용했던 파일의 이름이다. (반드시 같은 이름이어야 함)
 
+
+### - GPS 사용법 -
+
+공식 문서를 적극 참고한다.
+
+`https://developers.google.com/maps/documentation/android-api/start`
+
+MapsActivity는 직접 만들도록 하고 안의 메소드만 Github에서 가져다 쓴다. 
+
+MapsActivity를 만들기 위해 액티비티 갤러리에서 Google Maps Activity를 선택한다.
+google_maps_api.xml 내부의 주석 설명을 따라서 key를 만들고  만든 키를 google_maps_api.xml 내의 YOUR_KEY_HERE 에 넣는다.

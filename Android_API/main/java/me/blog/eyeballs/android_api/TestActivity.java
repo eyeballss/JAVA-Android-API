@@ -1,5 +1,6 @@
 package me.blog.eyeballs.android_api;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -71,5 +72,10 @@ public class TestActivity extends RootActivity {
     public void deleteData(View view){
         removeAllPreferences(FILENAME);
         Toast.makeText(this, "저장된 데이터를 모두 지웠습니다.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onGPSTest(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 }

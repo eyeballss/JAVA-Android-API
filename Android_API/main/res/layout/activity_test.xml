@@ -36,6 +36,12 @@
 
     </LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS 테스트"
+        android:onClick="onGPSTest"/>
+
 
 
 </LinearLayout>
