@@ -1,5 +1,16 @@
 JAVA-Android-API
 ===========
+
+
+### 기존 Android API가 너무 더럽게 쓰여져있어서, 새롭게 API를 만듭니다.
+*새로운 API는 [이곳](https://github.com/eyeballss/JAVA-Android-API/tree/master/new_Android_APIs)에 올리려고 합니다.*
+
+안드로이드 API 2018.3.5
+
+---
+
+여기 아래부터는 2017년에 만든 더러운(...) API들입니다.
+
 자바와 안드로이드 API
 2017.5.2
 
