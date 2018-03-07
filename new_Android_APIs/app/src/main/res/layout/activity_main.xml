@@ -6,10 +6,30 @@
     android:layout_height="match_parent"
     tools:context="me.blog.eyeballss.android_api.Activities.MainActivity">
 
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My Fragment Manager class sample"
-        android:onClick="myFragmentManager"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myFragmentManager"
+                android:text="My Fragment Manager class sample" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myLoggerManager"
+                android:text="My Logger class sample" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

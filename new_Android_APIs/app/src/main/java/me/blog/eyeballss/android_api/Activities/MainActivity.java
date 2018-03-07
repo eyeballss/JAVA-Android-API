@@ -18,4 +18,8 @@ public class MainActivity extends AppCompatActivity {
     public void myFragmentManager(View view){
         startActivity(new Intent(this, MyFragmentManagerSampleActivity.class));
     }
+
+    public void myLoggerManager(View view) {
+        startActivity(new Intent(this, MyLoggerSampleActivity.class));
+    }
 }

@@ -24,7 +24,7 @@ public class MyFragmentManager {
             fragmentTransaction.commit();
         }
         else {
-            MyLogger.e(this, "fragmentTransaction가 없습니다. MyFragmentManager 인스턴스를 생성하세요.");
+            MyLogger.getInstance().e(this, "fragmentTransaction가 없습니다. MyFragmentManager 인스턴스를 생성하세요.");
         }
     }
 }
