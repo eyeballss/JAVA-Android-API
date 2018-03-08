@@ -25,8 +25,15 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="myLoggerManager"
+                android:onClick="myLogger"
                 android:text="My Logger class sample" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myCalendar"
+                android:text="My Calendar class sample" />
 
 
         </LinearLayout>
