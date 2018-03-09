@@ -16,7 +16,9 @@ public class MyCalendarSampleActivity extends AppCompatActivity {
 
     TextView today, result;
     EditText to;
-    Button convertBtn;
+
+    TextView result2;
+    EditText to2;
 
 
     @Override
@@ -26,8 +28,10 @@ public class MyCalendarSampleActivity extends AppCompatActivity {
 
          today = findViewById(R.id.today);
          to = findViewById(R.id.convert_to);
-         convertBtn = findViewById(R.id.convert_button);
          result = findViewById(R.id.convert_result);
+
+        to2 = findViewById(R.id.convert_to2);
+        result2 = findViewById(R.id.convert_result2);
 
         int weekday = MyCalendar.getInstance().getWeekday();
         String todayResult = "";
@@ -53,6 +57,23 @@ public class MyCalendarSampleActivity extends AppCompatActivity {
         String result = MyCalendar.getInstance().getCurrentSomething(to);
         if(result==null) result = "에러!";
         this.result.setText(result);
+
+    }
+
+    public void convert2(View view){
+
+        String to = this.to2.getText().toString();
+
+        MyCalendar.DateDifference dateDifference = MyCalendar.getInstance().getDifferenceDaysBetween(to);
+
+        String result = "에러";
+        if(dateDifference!=null){
+
+            long diff = dateDifference.getDifference();
+            String unit = dateDifference.getUnit();
+            result=diff+unit+" 지났습니다.";
+        }
+        this.result2.setText(result);
 
     }
 }
