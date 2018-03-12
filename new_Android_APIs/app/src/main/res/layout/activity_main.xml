@@ -35,6 +35,11 @@
                 android:onClick="myCalendar"
                 android:text="My Calendar class sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myRecyclerView"
+                android:text="My RecyclerView class sample" />
 
         </LinearLayout>
     </ScrollView>

@@ -1,12 +1,11 @@
 package me.blog.eyeballss.android_api.Activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import me.blog.eyeballss.android_api.R;
-import me.blog.eyeballss.android_api.Utils.MyCalendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void myCalendar(View view) {
         startActivity(new Intent(this, MyCalendarSampleActivity.class));
+    }
+
+    public void myRecyclerView(View view) {
+        startActivity(new Intent(this, MyRecyclerViewSampleActivity.class));
     }
 }

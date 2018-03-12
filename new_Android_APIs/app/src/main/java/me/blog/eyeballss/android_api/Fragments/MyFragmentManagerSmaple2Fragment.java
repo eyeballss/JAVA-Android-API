@@ -33,8 +33,8 @@ public class MyFragmentManagerSmaple2Fragment extends Fragment {
     public void onStart() {
         if(view==null) return;
 
-        TextView text1 = view.findViewById(R.id.fragment_sample1_text);
-        TextView text2 = view.findViewById(R.id.fragment_sample2_text);
+        TextView text1 = (TextView) view.findViewById(R.id.fragment_sample1_text);
+        TextView text2 = (TextView) view.findViewById(R.id.fragment_sample2_text);
 
         text1.setText("참");
         text2.setText("쉽죠잉");

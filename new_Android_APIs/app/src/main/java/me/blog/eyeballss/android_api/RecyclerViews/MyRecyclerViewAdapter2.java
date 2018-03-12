@@ -1,0 +1,66 @@
+package me.blog.eyeballss.android_api.RecyclerViews;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import me.blog.eyeballss.android_api.R;
+
+/**
+ * Created by eye on 18. 3. 12.
+ */
+
+public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewAdapter2.ViewHolder> {
+    private ArrayList<String> mDataset;
+    private int resource;
+
+    public void add(ArrayList<String> data){
+        mDataset.addAll(data);
+        notifyDataSetChanged();
+    }
+
+    public MyRecyclerViewAdapter2(int resource) {
+        this.resource = resource;
+        mDataset = new ArrayList<String>();
+    }
+
+    @Override
+    public MyRecyclerViewAdapter2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
+        return new ViewHolder(view);
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return mDataset.size();
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.mTextView.setText(mDataset.get(position));
+
+        if(position%2==0){
+            holder.mImageView.setImageResource(R.mipmap.ic_launcher);
+        }else{
+            holder.mImageView.setImageResource(R.mipmap.ic_launcher_round);
+        }
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView mTextView;
+        public ImageView mImageView;
+
+        public ViewHolder(View view) {
+            super(view);
+            mTextView = (TextView) view.findViewById(R.id.textView2);
+            mImageView = (ImageView) view.findViewById(R.id.imageView);
+        }
+
+    }
+}
