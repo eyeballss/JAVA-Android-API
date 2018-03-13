@@ -11,6 +11,7 @@ Android-API (by eyeballss)
 
 
 1. My Logger : 로그가 발생한 위치를 쉽게 알 수 있고, 디버깅 모드가 아닐 때를 위한 on off 기능이 있음.
-2. My Fragment Manager : 프래그먼트를 (그나마) 쉽게 만들 수 있도록 전체적인 코드 모양을 제공.
+2. My Fragment Manager : 프래그먼트를 (그나마) 쉽게 만들 수 있도록 전반적인 코드 모양을 제공.
 3. My Calendar : 시간 관련 메소드들을 사용할 수 있음.
-4. My RecyclerView : 리사이클러뷰를 (그나마) 쉽게 만들 수 있도록 전체적인 코드 모양을 제공.
+4. My RecyclerViewManager : 리사이클러뷰를 (그나마) 쉽게 만들 수 있도록 전반적인 코드 모양을 제공.
+5. My CustomView : 커스텀뷰를 만들 때 따라할 수 있도록 전반적인 코드 모양을 제공.
