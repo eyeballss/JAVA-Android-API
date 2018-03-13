@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
     public void myRecyclerView(View view) {
         startActivity(new Intent(this, MyRecyclerViewSampleActivity.class));
     }
+
+    public void myCustomView(View view){
+        startActivity(new Intent(this, MyCustomViewSampleActivity.class));
+    }
 }
