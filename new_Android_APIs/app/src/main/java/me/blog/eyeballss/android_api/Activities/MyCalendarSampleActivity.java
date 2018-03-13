@@ -1,10 +1,13 @@
 package me.blog.eyeballss.android_api.Activities;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.Date;
 
 import me.blog.eyeballss.android_api.R;
 import me.blog.eyeballss.android_api.Utils.MyCalendar;
@@ -23,12 +26,12 @@ public class MyCalendarSampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_calendar_sample);
 
-         today = (TextView) findViewById(R.id.today);
-         to = (EditText) findViewById(R.id.convert_to);
-         result = (TextView) findViewById(R.id.convert_result);
+         today = findViewById(R.id.today);
+         to = findViewById(R.id.convert_to);
+         result = findViewById(R.id.convert_result);
 
-        to2 = (EditText) findViewById(R.id.convert_to2);
-        result2 = (TextView) findViewById(R.id.convert_result2);
+        to2 = findViewById(R.id.convert_to2);
+        result2 = findViewById(R.id.convert_result2);
 
         int weekday = MyCalendar.getInstance().getWeekday();
         String todayResult = "";

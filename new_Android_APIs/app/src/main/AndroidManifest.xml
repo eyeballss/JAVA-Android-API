@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".Activities.MyLoggerSampleActivity" />
         <activity android:name=".Activities.MyCalendarSampleActivity"></activity>
-	<activity android:name=".Activities.MyRecyclerViewSampleActivity"/>
+        <activity android:name=".Activities.MyRecyclerViewSampleActivity"/>
     </application>
 
 </manifest>

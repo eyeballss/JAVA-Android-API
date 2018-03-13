@@ -17,7 +17,7 @@ public class MyLoggerSampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_logger_sample);
 
-        logMessage = (EditText) findViewById(R.id.log_message);
+        logMessage = findViewById(R.id.log_message);
         MyLogger.getInstance().i(this, "MyLoggerr 는 이렇게 씁니다.");
     }
 

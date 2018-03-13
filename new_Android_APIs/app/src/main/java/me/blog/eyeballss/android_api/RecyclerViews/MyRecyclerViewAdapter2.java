@@ -30,7 +30,7 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
     }
 
     @Override
-    public MyRecyclerViewAdapter2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
         return new ViewHolder(view);
 
