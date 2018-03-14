@@ -48,6 +48,12 @@
                 android:onClick="myCustomView"
                 android:text="My CustomView sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myDataPasser"
+                android:text="My DataPasser sample" />
+
 
         </LinearLayout>
     </ScrollView>

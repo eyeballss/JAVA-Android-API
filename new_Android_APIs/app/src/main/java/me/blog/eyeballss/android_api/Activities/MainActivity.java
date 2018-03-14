@@ -35,4 +35,8 @@ public class MainActivity extends AppCompatActivity {
     public void myCustomView(View view){
         startActivity(new Intent(this, MyCustomViewSampleActivity.class));
     }
+
+    public void myDataPasser(View view){
+        startActivity(new Intent(this, MyDataPasserSenderSample.class));
+    }
 }
