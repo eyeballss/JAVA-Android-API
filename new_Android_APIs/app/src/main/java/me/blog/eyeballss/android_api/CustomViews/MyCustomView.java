@@ -102,6 +102,10 @@ public class MyCustomView extends RelativeLayout{
     public void setIcon(int img) {
         icon.setImageResource(img);
     }
+
+    public ImageView getIconView(){
+        return icon;
+    }
 }
 
 
