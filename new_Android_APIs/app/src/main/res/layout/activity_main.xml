@@ -21,7 +21,6 @@
                 android:onClick="myFragmentManager"
                 android:text="My Fragment Manager class sample" />
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,6 +52,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="myDataPasser"
                 android:text="My DataPasser sample" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myFileManager"
+                android:text="My FileManager sample" />
 
 
         </LinearLayout>

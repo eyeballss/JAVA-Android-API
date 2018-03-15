@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import me.blog.eyeballss.android_api.R;
-import me.blog.eyeballss.android_api.Utils.MyCalendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myDataPasser(View view){
-        startActivity(new Intent(this, MyDataPasserSenderSample.class));
+        startActivity(new Intent(this, MyDataPasserSenderSampleActivity.class));
+    }
+
+    public void myFileManager(View view){
+        startActivity(new Intent(this, MyFileManagerSampleActivity.class));
     }
 }

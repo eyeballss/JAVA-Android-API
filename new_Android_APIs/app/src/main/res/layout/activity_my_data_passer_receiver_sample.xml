@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#55000000"
-    tools:context="me.blog.eyeballss.android_api.Activities.MyDataPasserReceiverSample">
+    tools:context="me.blog.eyeballss.android_api.Activities.MyDataPasserReceiverSampleActivity">
 
 
     <RelativeLayout

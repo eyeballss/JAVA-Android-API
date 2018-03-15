@@ -21,8 +21,9 @@
         <activity android:name=".Activities.MyCalendarSampleActivity" />
         <activity android:name=".Activities.MyRecyclerViewSampleActivity" />
         <activity android:name=".Activities.MyCustomViewSampleActivity" />
-        <activity android:name=".Activities.MyDataPasserSenderSample" />
-        <activity android:name=".Activities.MyDataPasserReceiverSample"></activity>
+        <activity android:name=".Activities.MyDataPasserSenderSampleActivity" />
+        <activity android:name=".Activities.MyDataPasserReceiverSampleActivity" />
+        <activity android:name=".Activities.MyFileManagerSampleActivity"></activity>
     </application>
 
 </manifest>
