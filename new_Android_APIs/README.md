@@ -15,3 +15,6 @@ Android-API (Android Personal Interface by eyeballss)
 3. My Calendar : 시간 관련 메소드들을 사용할 수 있음.
 4. My RecyclerViewManager : 리사이클러뷰를 (그나마) 쉽게 만들 수 있도록 전반적인 코드 모양을 제공.
 5. My CustomView : 커스텀뷰를 만들 때 따라할 수 있도록 전반적인 코드 모양을 제공.
+6. My DataPasser : 액티비티 간 인스턴스 등의 데이터 교환을 쉽게 하도록 도와줌.
+7. My FileManager : String을 파일로 저장, 저장한 파일 불러오기 등의 메소들 제공.
+
