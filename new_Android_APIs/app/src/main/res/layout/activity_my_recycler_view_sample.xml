@@ -29,5 +29,16 @@
             android:layout_margin="10dp"
             android:layout_weight="1"/>
 
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#ffffff"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
