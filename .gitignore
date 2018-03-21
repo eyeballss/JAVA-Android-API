@@ -1,3 +1,10 @@
 *~
 *.log
 *.bak
+*.iml
+*.swp
+new_Android_APIs/build/*
+new_Android_APIs/gradle/*
+new_Android_APIs/.gradle/*
+new_Android_APIs/.idea/*
+
