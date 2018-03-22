@@ -42,4 +42,8 @@ public class MainActivity extends AppCompatActivity {
     public void myFileManager(View view){
         startActivity(new Intent(this, MyFileManagerSampleActivity.class));
     }
+
+    public void myLoader(View view){
+        startActivity(new Intent(this, MyLoaderSampleActivity.class));
+    }
 }

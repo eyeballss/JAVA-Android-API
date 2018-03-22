@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.blog.eyeballss.android_api">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +26,8 @@
         <activity android:name=".Activities.MyCustomViewSampleActivity" />
         <activity android:name=".Activities.MyDataPasserSenderSampleActivity" />
         <activity android:name=".Activities.MyDataPasserReceiverSampleActivity" />
-        <activity android:name=".Activities.MyFileManagerSampleActivity"></activity>
+        <activity android:name=".Activities.MyFileManagerSampleActivity" />
+        <activity android:name=".Activities.MyLoaderSampleActivity"></activity>
     </application>
 
 </manifest>

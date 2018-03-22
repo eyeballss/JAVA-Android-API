@@ -59,6 +59,11 @@
                 android:onClick="myFileManager"
                 android:text="My FileManager sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myLoader"
+                android:text="My Loader(Gallery) sample" />
 
         </LinearLayout>
     </ScrollView>
