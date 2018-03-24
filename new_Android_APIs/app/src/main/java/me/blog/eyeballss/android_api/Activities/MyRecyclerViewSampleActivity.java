@@ -1,16 +1,16 @@
 package me.blog.eyeballss.android_api.Activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 import me.blog.eyeballss.android_api.R;
-import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter3;
-import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewManager;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter2;
+import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter3;
+import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewManager;
 
 
 public class MyRecyclerViewSampleActivity extends AppCompatActivity {
@@ -39,7 +39,7 @@ public class MyRecyclerViewSampleActivity extends AppCompatActivity {
         }
 
         MyRecyclerViewAdapter mAdapter = new MyRecyclerViewAdapter(R.layout.my_recycler_view_sample_layout);
-        RecyclerView myRecyclerView = new MyRecyclerViewManager(this).on(recyclerViewSample).linearLayout(1).with(mAdapter);
+        recyclerViewSample = new MyRecyclerViewManager(this).on(recyclerViewSample).linearLayout(true).with(mAdapter);
         mAdapter.add(data);
     }
 
@@ -54,7 +54,7 @@ public class MyRecyclerViewSampleActivity extends AppCompatActivity {
         }
 
         MyRecyclerViewAdapter2 mAdapter = new MyRecyclerViewAdapter2(R.layout.my_recycler_view_sample_layout2);
-        RecyclerView myRecyclerView = new MyRecyclerViewManager(this).on(recyclerViewSample).gridLayout(5).with(mAdapter);
+        recyclerViewSample = new MyRecyclerViewManager(this).on(recyclerViewSample).gridLayout(5).with(mAdapter);
         mAdapter.add(data);
     }
 
@@ -70,7 +70,8 @@ public class MyRecyclerViewSampleActivity extends AppCompatActivity {
         }
 
         MyRecyclerViewAdapter3 mAdapter = new MyRecyclerViewAdapter3(R.layout.my_recycler_view_sample_layout3);
-        RecyclerView myRecyclerView = new MyRecyclerViewManager(this).on(recyclerViewSample).staggeredGridLayout(3).with(mAdapter);
+        mAdapter.setRecyclerView(recyclerViewSample);
+        recyclerViewSample = new MyRecyclerViewManager(this).on(recyclerViewSample).staggeredGridLayout(3).with(mAdapter);
         mAdapter.add(data);
     }
 }

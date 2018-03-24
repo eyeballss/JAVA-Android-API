@@ -17,22 +17,36 @@ import me.blog.eyeballss.android_api.R;
 
 public class MyRecyclerViewAdapter3 extends RecyclerView.Adapter<MyRecyclerViewAdapter3.ViewHolder> {
     private ArrayList<String> mDataset;
+    private boolean[] mDatasetStatus;
     private int resource;
+    private RecyclerView mRecyclerView;
 
     public void add(ArrayList<String> data){
         mDataset.addAll(data);
+        mDatasetStatus = new boolean[getItemCount()];
         notifyDataSetChanged();
     }
 
     public MyRecyclerViewAdapter3(int resource) {
         this.resource = resource;
         mDataset = new ArrayList<String>();
+        mDatasetStatus = new boolean[getItemCount()];
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
-        return new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = mRecyclerView.getChildLayoutPosition(view);
+                mDatasetStatus[position] = !mDatasetStatus[position];
+                if(!mDatasetStatus[position]) holder.mImageView.setBackgroundResource(R.color.black);
+                else holder.mImageView.setBackgroundResource(R.color.white);
+            }
+        });
+        return holder;
 
     }
 
@@ -52,12 +66,18 @@ public class MyRecyclerViewAdapter3 extends RecyclerView.Adapter<MyRecyclerViewA
         }
 
         if(position%3==0) {
-            holder.mImageView.setBackgroundResource(R.color.black);
             holder.mTextView.setText("길\n어\n져\n라\n!");
         }
+
+        if(!mDatasetStatus[position]) holder.mImageView.setBackgroundResource(R.color.black);
+        else holder.mImageView.setBackgroundResource(R.color.white);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public void setRecyclerView(RecyclerView recyclerViewSample) {
+        mRecyclerView = recyclerViewSample;
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView mTextView;
         public ImageView mImageView;
 
@@ -65,12 +85,6 @@ public class MyRecyclerViewAdapter3 extends RecyclerView.Adapter<MyRecyclerViewA
             super(view);
             mTextView = (TextView) view.findViewById(R.id.textView3);
             mImageView = (ImageView) view.findViewById(R.id.imageView);
-            mImageView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            mImageView.setBackgroundResource(R.color.white);
         }
     }
 }

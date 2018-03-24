@@ -18,6 +18,9 @@ public class MyRecyclerViewManager {
     private GridLayoutManager mGridLayoutManager;
     private StaggeredGridLayoutManager mStaggeredGridLayout;
 
+    public static final int ORIENTATION_HORISONTAL = 0;
+    public static final int ORIENTATION_VERTICAL = 1;
+
     public MyRecyclerViewManager(Context context){
         this.context = context;
     }
@@ -28,13 +31,16 @@ public class MyRecyclerViewManager {
         return this;
     }
 
-    //H : 0 V : 1
     public MyRecyclerViewManager linearLayout(int orientation){
         linearLayout(orientation, false);
         return this;
     }
 
-    //H : 0 V : 1
+    public MyRecyclerViewManager linearLayout(boolean reverse){
+        linearLayout(ORIENTATION_VERTICAL, reverse);
+        return this;
+    }
+
     public MyRecyclerViewManager linearLayout(int orientation, boolean reverse){
         if(mRecyclerView==null) return null;
         mLinearLayoutManager = new LinearLayoutManager(context, orientation, reverse);
@@ -42,26 +48,35 @@ public class MyRecyclerViewManager {
         return this;
     }
 
+    public MyRecyclerViewManager gridLayout(int num) {
+        return gridLayout(num, ORIENTATION_VERTICAL, false);
+    }
 
-    public MyRecyclerViewManager gridLayout(int num){
+    public MyRecyclerViewManager gridLayout(int num, boolean reverse) {
+        return gridLayout(num, ORIENTATION_VERTICAL, reverse);
+    }
+
+    public MyRecyclerViewManager gridLayout(int num, int orientation) {
+        return gridLayout(num, orientation, false);
+    }
+
+    public MyRecyclerViewManager gridLayout(int num, int orientation, boolean reverse){
         if(mRecyclerView==null) return null;
-        mGridLayoutManager = new GridLayoutManager(context, num);
+        mGridLayoutManager = new GridLayoutManager(context, num, orientation, reverse);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
         return this;
     }
 
     public MyRecyclerViewManager staggeredGridLayout(int num){
-        return staggeredGridLayout(num, 1);
+        return staggeredGridLayout(num, ORIENTATION_VERTICAL);
     }
 
-    //H : 0 V : 1
     public MyRecyclerViewManager staggeredGridLayout(int num, int orientation){
         if(mRecyclerView==null) return null;
         mStaggeredGridLayout = new StaggeredGridLayoutManager(num, orientation);
         mRecyclerView.setLayoutManager(mStaggeredGridLayout);
         return this;
     }
-
 
     public RecyclerView with(RecyclerView.Adapter adapter){
         if(mRecyclerView==null) return null;
