@@ -69,6 +69,7 @@ import me.blog.eyeballss.android_api.Utils.AutoFitTextureView;
 import me.blog.eyeballss.android_api.Utils.MyDataPasser;
 
 public class MyCameraSampleActivity extends AppCompatActivity implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback, View.OnTouchListener, View.OnLongClickListener{
+    private static final int MAX_RECORDING_TIME= 10; //10초
 
     private static final int SENSOR_ORIENTATION_DEFAULT_DEGREES = 90;
     private static final int SENSOR_ORIENTATION_INVERSE_DEGREES = 270;
@@ -505,6 +506,7 @@ public class MyCameraSampleActivity extends AppCompatActivity implements View.On
         mButton.setOnTouchListener(this);
         mButton.setOnLongClickListener(this);
         mProgressBar = findViewById(R.id.progress_bar);
+        mProgressBar.setMax(MAX_RECORDING_TIME);
         mTextureView = findViewById(R.id.texture);
 
 
@@ -1015,7 +1017,7 @@ public class MyCameraSampleActivity extends AppCompatActivity implements View.On
         mMediaRecorder.setOutputFile(mNextVideoAbsolutePath);
         mMediaRecorder.setVideoEncodingBitRate(10000000);
         mMediaRecorder.setVideoFrameRate(30);
-        mMediaRecorder.setMaxDuration(10000);
+        mMediaRecorder.setMaxDuration(MAX_RECORDING_TIME*1000);
         mMediaRecorder.setVideoSize(mVideoSize.getWidth(), mVideoSize.getHeight());
         mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
@@ -1270,7 +1272,7 @@ public class MyCameraSampleActivity extends AppCompatActivity implements View.On
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void startCheckingTimeLapse() {
-        if(timeLapseCounter<=10) {
+        if(timeLapseCounter<=MAX_RECORDING_TIME) {
             ismIsRecordingTimeLapse= true;
             timeLapseHandler.sendEmptyMessageDelayed(0, 1000);
         }else {
