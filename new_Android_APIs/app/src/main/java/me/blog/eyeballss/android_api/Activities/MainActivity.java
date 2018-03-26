@@ -46,4 +46,8 @@ public class MainActivity extends AppCompatActivity {
     public void myLoader(View view){
         startActivity(new Intent(this, MyLoaderSampleActivity.class));
     }
+
+    public void myCamera(View view){
+        startActivity(new Intent(this, MyCameraSampleActivity.class));
+    }
 }

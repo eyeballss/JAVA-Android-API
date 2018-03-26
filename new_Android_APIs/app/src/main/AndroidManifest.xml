@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -27,7 +31,8 @@
         <activity android:name=".Activities.MyDataPasserSenderSampleActivity" />
         <activity android:name=".Activities.MyDataPasserReceiverSampleActivity" />
         <activity android:name=".Activities.MyFileManagerSampleActivity" />
-        <activity android:name=".Activities.MyLoaderSampleActivity"></activity>
+        <activity android:name=".Activities.MyLoaderSampleActivity" />
+        <activity android:name=".Activities.MyCameraSampleActivity"></activity>
     </application>
 
 </manifest>

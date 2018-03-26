@@ -65,6 +65,12 @@
                 android:onClick="myLoader"
                 android:text="My Loader(Gallery) sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myCamera"
+                android:text="My Camera sample" />
+
         </LinearLayout>
     </ScrollView>
 
