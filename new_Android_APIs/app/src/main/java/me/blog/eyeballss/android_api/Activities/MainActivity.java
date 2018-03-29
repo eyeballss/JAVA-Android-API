@@ -50,4 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public void myCamera(View view){
         startActivity(new Intent(this, MyCameraSampleActivity.class));
     }
+
+    public void myViewPager(View view){
+        startActivity(new Intent(this, MyViewPagerSampleActivity.class));
+    }
 }

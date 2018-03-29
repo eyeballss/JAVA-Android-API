@@ -71,6 +71,13 @@
                 android:onClick="myCamera"
                 android:text="My Camera sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myViewPager"
+                android:text="My ViewPager sample" />
+
+
         </LinearLayout>
     </ScrollView>
 

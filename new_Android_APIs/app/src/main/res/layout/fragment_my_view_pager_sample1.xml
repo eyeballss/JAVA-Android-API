@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.blog.eyeballss.android_api.Fragments.MyViewPagerSample1Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0000">
+
+
+
+        <TextView
+            android:id="@+id/viewpager_first_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="첫번째!"
+            android:textColor="@color/white"
+            android:textSize="100dp"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
