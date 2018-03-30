@@ -54,4 +54,8 @@ public class MainActivity extends AppCompatActivity {
     public void myViewPager(View view){
         startActivity(new Intent(this, MyViewPagerSampleActivity.class));
     }
+
+    public void myMap(View view){
+        startActivity(new Intent(this, MyMapSampleActivity.class));
+    }
 }

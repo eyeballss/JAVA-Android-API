@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera2.full" />
 
@@ -35,7 +37,8 @@
         <activity android:name=".Activities.MyFileManagerSampleActivity" />
         <activity android:name=".Activities.MyLoaderSampleActivity" />
         <activity android:name=".Activities.MyCameraSampleActivity" />
-        <activity android:name=".Activities.MyViewPagerSampleActivity"></activity>
+        <activity android:name=".Activities.MyViewPagerSampleActivity" />
+        <activity android:name=".Activities.MyMapSampleActivity"></activity>
     </application>
 
 </manifest>
