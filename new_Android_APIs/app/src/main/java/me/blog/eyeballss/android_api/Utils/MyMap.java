@@ -1,6 +1,7 @@
 package me.blog.eyeballss.android_api.Utils;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,6 +9,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
@@ -16,6 +19,7 @@ import android.widget.Toast;
  */
 
 public class MyMap {
+    public final static int PERMISSION_ACCESS_FINE_LOCATION = 2;
 
     public void navigateWithThirdParyMap(Context context, double lat, double lng, String mode) {
 
@@ -202,6 +206,22 @@ public class MyMap {
             }
         }
         return distance+meter;
+    }
+
+
+    public boolean checkPermission(Activity activity){
+
+        if(Build.VERSION.SDK_INT < 23) return true;
+
+        String permission = Manifest.permission.ACCESS_FINE_LOCATION;
+        int permissionCode = PERMISSION_ACCESS_FINE_LOCATION;
+
+        if(ContextCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED) return true;
+//        if(ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_DENIED) {}//거절 한 이후부터.
+        ActivityCompat.requestPermissions(activity, new String[]{permission}, permissionCode);
+        return false;
+
+
     }
 
 }

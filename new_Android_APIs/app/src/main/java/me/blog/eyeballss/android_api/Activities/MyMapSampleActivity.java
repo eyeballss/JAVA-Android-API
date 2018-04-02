@@ -28,6 +28,14 @@ public class MyMapSampleActivity extends AppCompatActivity {
 
         myMap = new MyMap(this);
 
+        //permission check
+        boolean permission = myMap.checkPermission(this);
+        if(!permission) finish();
+
+        //핸드폰의 gps를 켰는지 체크.
+        myMap.checkGPS();
+
+
         myLocation = findViewById(R.id.my_location);
         search = findViewById(R.id.search_google_map);
         searchBtn = findViewById(R.id.search_google_map_btn);
@@ -38,15 +46,12 @@ public class MyMapSampleActivity extends AppCompatActivity {
         numberTo = findViewById(R.id.number_to);
 
 
-        //핸드폰의 gps를 켰는지 체크.
-        myMap.checkGPS();
-
         LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
                 //내 위치가 바뀔때마다 위도 경도가 바뀐다.
                 myLocation.setText(location.getLatitude() + " , " + location.getLongitude());
-                search.setText("검색어를 넣으세요.");
+                search.setHint("검색어를 넣으세요.");
                 searchBtn.setEnabled(true);
             }
 
