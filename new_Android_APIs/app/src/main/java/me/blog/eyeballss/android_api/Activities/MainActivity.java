@@ -58,4 +58,8 @@ public class MainActivity extends AppCompatActivity {
     public void myMap(View view){
         startActivity(new Intent(this, MyMapSampleActivity.class));
     }
+
+    public void myGuestureDetector(View view){
+        startActivity(new Intent(this, MyGuestureDetectorSampleActivity.class));
+    }
 }

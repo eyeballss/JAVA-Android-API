@@ -83,6 +83,11 @@
                 android:onClick="myMap"
                 android:text="My Map sample" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myGuestureDetector"
+                android:text="My GuestureDetector sample\n(not working yet)" />
 
         </LinearLayout>
     </ScrollView>

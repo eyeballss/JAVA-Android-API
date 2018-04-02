@@ -38,7 +38,8 @@
         <activity android:name=".Activities.MyLoaderSampleActivity" />
         <activity android:name=".Activities.MyCameraSampleActivity" />
         <activity android:name=".Activities.MyViewPagerSampleActivity" />
-        <activity android:name=".Activities.MyMapSampleActivity"></activity>
+        <activity android:name=".Activities.MyMapSampleActivity" />
+        <activity android:name=".Activities.MyGuestureDetectorSampleActivity"></activity>
     </application>
 
 </manifest>
