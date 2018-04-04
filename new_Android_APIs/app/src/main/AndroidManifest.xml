@@ -39,7 +39,8 @@
         <activity android:name=".Activities.MyCameraSampleActivity" />
         <activity android:name=".Activities.MyViewPagerSampleActivity" />
         <activity android:name=".Activities.MyMapSampleActivity" />
-        <activity android:name=".Activities.MyGuestureDetectorSampleActivity"></activity>
+        <activity android:name=".Activities.MyGuestureDetectorSampleActivity" />
+        <activity android:name=".Activities.MyDialogSampleActivity"></activity>
     </application>
 
 </manifest>

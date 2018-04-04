@@ -62,4 +62,8 @@ public class MainActivity extends AppCompatActivity {
     public void myGuestureDetector(View view){
         startActivity(new Intent(this, MyGuestureDetectorSampleActivity.class));
     }
+
+    public void myDialog(View view){
+        startActivity(new Intent(this, MyDialogSampleActivity.class));
+    }
 }

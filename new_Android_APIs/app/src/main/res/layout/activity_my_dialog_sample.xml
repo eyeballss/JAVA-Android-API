@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.blog.eyeballss.android_api.Activities.MyDialogSampleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="다이얼로그 창 띄우기"/>
+
+        <EditText
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="다이얼로그 창의 제목"/>
+
+
+        <EditText
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="다이얼로그 창의 내용"/>
+
+
+        <EditText
+            android:id="@+id/dialog_okay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="다이얼로그 창의 okay 버튼. 없으면 'okay'"/>
+
+        <EditText
+            android:id="@+id/dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="다이얼로그 창의 cancel 버튼. 없으면 'cancel'"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/dialog_type1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="제목과 내용만 있는 다이얼로그 띄우기"/>
+
+            <Button
+                android:id="@+id/dialog_type2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="제목과 내용과 okay 버튼 다이얼로그 띄우기"/>
+
+            <Button
+                android:id="@+id/dialog_type3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="제목과 내용과 okay, cacel 버튼 다이얼로그 띄우기"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

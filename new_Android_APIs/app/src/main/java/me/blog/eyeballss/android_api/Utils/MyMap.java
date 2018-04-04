@@ -140,6 +140,17 @@ public class MyMap {
         return convertDoubleToLocation(latDouble, lngDouble);
     }
 
+    public boolean isGPSAvailable(){
+        if(context==null) return false;
+
+        LocationManager lm = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
+        boolean isGPS = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        if (isGPS) return true;
+        else return false;
+
+    }
+
+
     public boolean checkGPS() {
         LocationManager lm = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
         boolean isGPS = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);

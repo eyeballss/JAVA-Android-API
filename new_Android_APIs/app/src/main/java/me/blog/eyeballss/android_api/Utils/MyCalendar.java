@@ -125,6 +125,28 @@ public class MyCalendar {
 
     }
 
+    //제대로 된 생년 월 일이 들어갔는지 체크
+    public boolean checkBirthday(int year, int month, int day){
+
+        //년 자체가 잘못 되어있다면. 1800은 단지 기준값일 뿐.
+        if(year<1800) return false;
+
+        //달 자체가 잘못 되어있다면
+        if(month<=0 || month>12) return false;
+
+        //일 자체가 잘못 되어있다면
+        if(day<=0 || day>31) return false;
+
+        int extra = 0;
+        if( (0 == (year % 4) && 0 != (year %100)) || 0 == year%400 ) extra=1; //윤년이면 +1
+
+        int days[] = {31, 28+extra, 31,30,31,30,31,31,30,31,30,31};
+
+        if(day>days[month-1]) return false;
+
+        return true;
+    }
+
     public class DateDifference{
         private String unit;
         private long difference;

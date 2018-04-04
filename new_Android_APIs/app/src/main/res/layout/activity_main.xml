@@ -89,6 +89,16 @@
                 android:onClick="myGuestureDetector"
                 android:text="My GuestureDetector sample\n(not working yet)" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="myDialog"
+                android:text="My Dialog sample" />
+
+
+
+
+
         </LinearLayout>
     </ScrollView>
 
