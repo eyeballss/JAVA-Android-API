@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import me.blog.eyeballss.android_api.R;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter2;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewAdapter3;
 import me.blog.eyeballss.android_api.RecyclerViews.MyRecyclerViewManager;
+import me.blog.eyeballss.android_api.RecyclerViews.SimpleSectionedRecyclerViewAdapter;
 
 
 public class MyRecyclerViewSampleActivity extends AppCompatActivity {
@@ -33,14 +35,33 @@ public class MyRecyclerViewSampleActivity extends AppCompatActivity {
         ArrayList<String> data = new ArrayList<String>();
 
         for(int i=0; i<30; i++){
-            data.add("이것은");
-            data.add("샘플");
-            data.add("입니다");
+            data.add("김개똥");
+            data.add("스누피");
+            data.add("눈가락");
         }
-
         MyRecyclerViewAdapter mAdapter = new MyRecyclerViewAdapter(R.layout.my_recycler_view_sample_layout);
-        recyclerViewSample = new MyRecyclerViewManager(this).on(recyclerViewSample).linearLayout(true).with(mAdapter);
         mAdapter.add(data);
+
+
+        //세션을 위한 리사이클러뷰 세팅
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections =
+                new ArrayList<>();
+        //세션들을 넣음.
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"1등부터 10등까지 명단"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(10,"그 외"));
+
+        //세션 어댑터를 만들고 세션에 표시될 레이아웃을 세팅함.
+        SimpleSectionedRecyclerViewAdapter.Section[] dummy = new SimpleSectionedRecyclerViewAdapter.Section[sections.size()];
+
+        SimpleSectionedRecyclerViewAdapter mSectionedAdapter = new
+                SimpleSectionedRecyclerViewAdapter(this, R.layout.my_recycler_view_sample_section_cell, R.id.textView, mAdapter);
+        mSectionedAdapter.setSections(sections.toArray(dummy));
+
+
+        recyclerViewSample = new MyRecyclerViewManager(this).on(recyclerViewSample).linearLayout(1).with(mAdapter);
+        //세션 어댑터를 다시 장착
+        recyclerViewSample.setAdapter(mSectionedAdapter);
+
     }
 
     private void setRecyclerViewSample2() {
