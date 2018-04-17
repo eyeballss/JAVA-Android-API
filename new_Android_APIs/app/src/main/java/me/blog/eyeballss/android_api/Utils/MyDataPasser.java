@@ -27,6 +27,10 @@ public class MyDataPasser {
         return true;
     }
 
+    public boolean isSaved(String key){
+        return dataMap.containsKey(key);
+    }
+
     public Object getData(String key) {
         Object temp = dataMap.get(key);
         dataMap.remove(key);
